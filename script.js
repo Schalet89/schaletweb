@@ -3,6 +3,11 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
   alert("Pesan telah dikirim!");
 });
 
+function toggleMenu() {
+  const menu = document.getElementById("main-menu");
+  menu.classList.toggle("hidden");
+}
+
 function downloadMedia() {
   const url = document.getElementById("media-url").value.trim();
   const site = document.getElementById("target-site").value;
