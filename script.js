@@ -67,3 +67,19 @@ function submitWelcome() {
     profil.appendChild(greet);
   }
 }
+
+const music = document.getElementById("bg-music");
+const toggleBtn = document.getElementById("toggle-music");
+
+let isPlaying = true;
+
+toggleBtn.addEventListener("click", () => {
+  if (isPlaying) {
+    music.pause();
+    toggleBtn.textContent = "🔇";
+  } else {
+    music.play();
+    toggleBtn.textContent = "🔊";
+  }
+  isPlaying = !isPlaying;
+});
