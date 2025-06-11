@@ -1,273 +1,98 @@
-* {
-  box-sizing: border-box;
-}
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f4f6;
-  color: #111827;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
 }
-.container {
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
   display: flex;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
 }
-.sidebar {
-  background-color: #1f2937;
-  color: white;
-  width: 200px;
-  padding-top: 20px;
-}
-.sidebar a {
-  display: block;
-  padding: 12px 20px;
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-.sidebar a:hover {
-  background-color: #334155;
-  border-left: 4px solid #0ea5e9;
-}
-.sidebar h2 {
-  margin-top: 0;
-}
-.sidebar nav button {
-  display: block;
+
+.menu-btn {
+  font-size: 24px;
   background: none;
   border: none;
   color: white;
-  margin: 0.5rem 0;
-  text-align: left;
   cursor: pointer;
-  font-size: 1rem;
 }
-.sidebar nav button:hover {
-  text-decoration: underline;
-}
-.content {
-  flex: 1;
-  padding: 20px;
-  max-width: 500px;
-  margin: auto;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-form input, form textarea {
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-form button {
-  width: fit-content;
-  padding: 0.5rem 1rem;
-  background-color: #2563eb;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background: #444;
   color: white;
-  border: none;
-  border-radius: 5px;
+  padding-top: 2rem;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 1rem;
   cursor: pointer;
 }
-form button:hover {
-  background-color: #1d4ed8;
+
+.sidebar li:hover {
+  background: #666;
 }
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #e5e7eb;
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
-.icon-buttons {
-  display: flex;
-  gap: 1rem;
+
+main {
+  padding: 2rem;
+}
+
+.content {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.profile-img {
+  width: 150px;
+  border-radius: 50%;
   margin: 1rem 0;
 }
 
-.icon-buttons button {
-  flex: 1;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: white;
+form {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
-  transition: transform 0.3s ease;
+  flex-direction: column;
 }
 
-.icon-buttons button:hover {
-  transform: scale(1.05);
-}
-
-.icon-buttons .yt {
-  background-color: #ff0000;
-}
-.icon-buttons .tt {
-  background-color: #010101;
-}
-.icon-buttons .ig {
-  background-color: #e1306c;
-}
-.profil-box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  padding: 1rem;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.profil-foto {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 10px;
-  border: 3px solid #ccc;
-}
-
-.profil-info h1 {
-  margin: 0;
-  font-size: 1.8rem;
-  color: #1f2937;
-}
-
-.profil-info p {
-  margin: 0.3rem 0;
-  color: #374151;
-}
-
-@media screen and (max-width: 600px) {
-  .profil-box {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-.profil-extra {
-  margin-top: 2rem;
-  padding: 1rem;
-  background-color: #f9fafb;
-  border-left: 5px solid #3b82f6;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-}
-
-.profil-extra h2 {
-  margin-top: 0;
-  color: #1f2937;
-}
-
-.profil-extra ul {
-  margin: 0;
-  padding-left: 1.2rem;
-  color: #374151;
-}
-
-.profil-extra li {
-  margin-bottom: 0.5rem;
-}
-@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
-
-body {
-  background: linear-gradient(to bottom), #f8f8f8, #ffeef5;
-   font-family: 'Sawarabi Mincho', sans-serif;
-   margin: 0;
-   padding: 0;
-}
-
-.modal {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.modal-content {
-  background: #fffdf9;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  max-width: 300px;
-  text-align: center;
-  font-size: 1rem;
-  animation: pop 0.3s ease;
-}
-
-.modal-content h2 {
-  margin-top: 0;
-  font-size: 1.5rem;
-  color: #d6336c;
-}
-
-.modal-content input {
-  display: block;
-  width: 100%;
+input, textarea {
   margin: 0.5rem 0;
   padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
-.modal-content button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #f472b6;
+button {
+  padding: 0.7rem;
+  font-size: 1rem;
+  background: #333;
   color: white;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
-}
-
-@keyframes pop {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-body{
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6 ;
-  background-color: #f9fafb;
-}
-
-#kamus-jepang {
-  background: #fef9f5;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 30px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
-#kamus-jepang input {
-  padding: 8px;
-  margin-top: 10px;
-  width: 60%;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-#kamus-jepang button {
-  padding: 8px 15px;
-  margin-left: 8px;
-  background-color: #0ea5e9;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-#kamus-jepang button:hover {
-  background-color: #0284c7;
 }
