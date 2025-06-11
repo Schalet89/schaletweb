@@ -9,3 +9,8 @@ function showSection(id) {
   document.getElementById(id).classList.remove("hidden");
   toggleSidebar();
 }
+
+function showJapaneseContent() {
+  const content = document.getElementById("japanese-content");
+  content.classList.toggle("hidden");
+}
