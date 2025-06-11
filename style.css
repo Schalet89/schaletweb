@@ -161,11 +161,10 @@ footer {
 @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 
 body {
-  font-family: 'Sawarabi Mincho', sans-serif;
-  background-image: url('https://images.unsplash.com/photo-1583324113626-70df0f4deaab?auto=format&fit=crop&w=1350&q=80');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
+  background: linear-gradient(to bottom), #f8f8f8, #ffeef5;
+   font-family: 'Sawarabi Mincho', sans-serif;
+   margin: 0;
+   padding: 0;
 }
 
 .modal {
