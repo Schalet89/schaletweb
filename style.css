@@ -14,8 +14,19 @@ body {
 .sidebar {
   background-color: #1f2937;
   color: white;
-  padding: 1rem;
   width: 200px;
+  padding-top: 20px;
+}
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.sidebar a:hover {
+  background-color: #334155;
+  border-left: 4px solid #0ea5e9;
 }
 .sidebar h2 {
   margin-top: 0;
@@ -35,7 +46,9 @@ body {
 }
 .content {
   flex: 1;
-  padding: 2rem;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
 }
 form {
   display: flex;
@@ -115,7 +128,9 @@ footer {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #ccc;
+  display: block;
+  margin: 0 auto 10px;
+  border: 3px solid #ccc;
 }
 
 .profil-info h1 {
@@ -218,4 +233,10 @@ body {
 @keyframes pop {
   from { transform: scale(0.9); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
+}
+
+body{
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6 ;
+  background-color: #f9fafb;
 }
