@@ -6,6 +6,12 @@ function showSection(id) {
   if (target) target.style.display = "block";
 }
 
+let selectedSite = "https://yt1s.ltd/en42?q=";
+
+function setSite(siteUrl) {
+  selectedSite = siteUrl;
+}
+
 // Form kontak
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
@@ -21,11 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // Download media sosial
 function downloadMedia() {
   const url = document.getElementById("media-url").value.trim();
-  const site = document.getElementById("target-site").value;
   if (!url) {
     alert("Masukkan URL terlebih dahulu.");
     return;
   }
-  const fullUrl = site + encodeURIComponent(url);
+  const fullUrl = selectedSite + encodeURIComponent(url);
   window.open(fullUrl, "_blank");
 }

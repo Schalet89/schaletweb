@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Schalet Web</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
   <div class="container">
@@ -40,13 +41,21 @@
 
       <section id="download" style="display: none;">
         <h1>Download Media Sosial</h1>
-        <input type="text" id="media-url" placeholder="Tempel URL dari YouTube, TikTok, Instagram..." />
-        <select id="target-site">
-          <option value="https://yt1s.ltd/en42?q=">YouTube</option>
-          <option value="https://ssstik.io/en?url=">TikTok</option>
-          <option value="https://snapinsta.app/download?url=">Instagram</option>
-        </select>
-        <button onclick="downloadMedia()">Download</button>
+<input type="text" id="media-url" placeholder="Tempel URL video atau lagu..." />
+
+<div class="icon-buttons">
+  <button onclick="setSite('https://yt1s.ltd/en42?q=')" class="yt">
+    <i class="fab fa-youtube"></i> YouTube
+  </button>
+  <button onclick="setSite('https://ssstik.io/en?url=')" class="tt">
+    <i class="fab fa-tiktok"></i> TikTok
+  </button>
+  <button onclick="setSite('https://snapinsta.app/download?url=')" class="ig">
+    <i class="fab fa-instagram"></i> Instagram
+  </button>
+</div>
+
+<button onclick="downloadMedia()">🔽 Download Sekarang</button>
       </section>
     </main>
   </div>

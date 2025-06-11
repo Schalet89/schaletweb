@@ -64,3 +64,37 @@ footer {
   padding: 1rem;
   background: #e5e7eb;
 }
+.icon-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.icon-buttons button {
+  flex: 1;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.icon-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.icon-buttons .yt {
+  background-color: #ff0000;
+}
+.icon-buttons .tt {
+  background-color: #010101;
+}
+.icon-buttons .ig {
+  background-color: #e1306c;
+}
