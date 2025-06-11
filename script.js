@@ -44,30 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-function submitWelcome() {
-  const name = document.getElementById("user-name").value;
-  const email = document.getElementById("user-email").value;
-
-  if (name.trim() === "" || email.trim() === "") {
-    alert("Isi nama dan email dulu ya~");
-    return;
-  }
-
-  localStorage.setItem("schaletUserName", name);
-  localStorage.setItem("schaletUserEmail", email);
-
-  document.getElementById("welcome-modal").style.display = "none";
-
-  const profil = document.getElementById("profil");
-  if (profil) {
-    const greet = document.createElement("p");
-    greet.textContent = 'Halo ${name}, selamat menjelajahi web ini 🌸';
-    greet.style.fontStyle = "italic";
-    greet.style.marginTop = "1rem";
-    profil.appendChild(greet);
-  }
-}
-
 const music = document.getElementById("bg-music");
 const toggleBtn = document.getElementById("toggle-music");
 
