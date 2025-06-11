@@ -175,7 +175,7 @@ function cariKata() {
   const hasil = document.getElementById("hasil-kamus");
 
   if (kamus[input]) {
-    hasil.innerHTML = <p><strong>${input}</strong>: ${kamus[input]}</p>;
+    hasil.innerHTML = '<p><strong>${input}</strong>: ${kamus[input]}</p>';
   } else {
     hasil.innerHTML = "<p>Maaf, kata tidak ditemukan/belum ditambahkan</p>";
   }
