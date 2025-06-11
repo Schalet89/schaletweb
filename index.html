@@ -1,45 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schalet Web</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-  <header>
-    <div class="nav-container">
-      <h1>Schalet-web</h1>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>☰ Menu</h2>
       <nav>
         <button onclick="showSection('profil')">Profil</button>
         <button onclick="showSection('kontak')">Kontak</button>
-        <button onclick="showSection('tools')">Alat</button>
+        <button onclick="showSection('alat')">Alat</button>
         <button onclick="showSection('download')">Download</button>
       </nav>
-    </div>
-  </header>
+    </aside>
+    <main class="content">
+      <section id="profil">
+        <h1>Profil</h1>
+        <p>Hai, saya Schalet, saya orangnya suka gabut, jadi saya coba belajar bikin web btw</p>
+      </section>
 
-  <main>
-    <section id="profil">
-      <h2>Profil</h2>
-      <p>Hello world</p>
-    </section>
+      <section id="kontak" style="display: none;">
+        <h1>Kontak</h1>
+        <form id="contact-form">
+          <input type="text" placeholder="Nama Lengkap" required />
+          <input type="email" placeholder="Alamat Email" required />
+          <textarea placeholder="Pesan kamu..." required></textarea>
+          <button type="submit">Kirim</button>
+        </form>
+      </section>
 
-    <section id="kontak" style="display:none">
-      <h2>Kontak</h2>
-      <form id="contact-form">
-        <input type="text" placeholder="Nama" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Pesan" required></textarea>
-        <button type="submit">Kirim</button>
-      </form>
-    </section>
+      <section id="alat" style="display: none;">
+        <h1>Alat Sederhana</h1>
+        <button onclick="alert('Belum ada fungsinya ygy')">Coba Alat</button>
+      </section>
 
-    <section id="tools" style="display:none">
-      <h2>Alat</h2>
-      <button onclick="alert('Masih belum berfungsi cuuk hayyuk')">Coba Alat</button>
-    </section>
-
-    <section id="download" style="display:none">
-      <h2>Download Media Sosial</h2>
-      <input type="text" id="media-url" placeholder="Masukkan URL video..." />
-      <select id="target-site">
-        <option value="https://yt1s.ltd/en42?q=">YouTube</option>
-        <option value="https://ssstik.io/en?url=">TikTok</option>
-        <option value="https://snapinsta.app/download?url=">Instagram</option>
-      </select>
-      <button onclick="downloadMedia()">Download</button>
-    </section>
-  </main>
+      <section id="download" style="display: none;">
+        <h1>Download Media Sosial</h1>
+        <input type="text" id="media-url" placeholder="Tempel URL dari YouTube, TikTok, Instagram..." />
+        <select id="target-site">
+          <option value="https://yt1s.ltd/en42?q=">YouTube</option>
+          <option value="https://ssstik.io/en?url=">TikTok</option>
+          <option value="https://snapinsta.app/download?url=">Instagram</option>
+        </select>
+        <button onclick="downloadMedia()">Download</button>
+      </section>
+    </main>
+  </div>
+  <footer>&copy; 2025 Web-Schalet</footer>
+  <script src="script.js"></script>
+</body>
+</html>
