@@ -96,3 +96,28 @@ button {
   border: none;
   cursor: pointer;
 }
+
+.belajar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-belajar {
+  padding: 0.8rem 1.2rem;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-belajar:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5f27cd, #9980fa);
+}
