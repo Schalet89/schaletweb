@@ -1,0 +1,23 @@
+body {
+  background: #f7f5f2 url('assets/img/sakura.png') repeat;
+  font-family: 'Arial', sans-serif;
+  padding: 40px;
+}
+
+.belajar-container {
+  background-color: #fffdfd;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.belajar-container ul {
+  list-style: square;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+  margin-top: 20px;
+}
