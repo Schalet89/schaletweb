@@ -81,3 +81,37 @@ body {
   text-decoration: underline;
   color: #ad1457;
 }
+
+@media screen and (max-widht: 768px)
+{
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .social-links {
+    margin: auto;
+    margin-top: 30px;
+  }
+}
