@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kosakata Bahasa Jepang</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdfdfd;
+      padding: 2em;
+      color: #333;
+    }
+    h1, h2 {
+      color: #cc3366;
+      border-bottom: 2px solid #ffc0cb;
+      padding-bottom: 5px;
+    }
+    input[type="text"] {
+      padding: 0.5em;
+      width: 100%;
+      margin-bottom: 1.5em;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2em;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.75em;
+      text-align: left;
+    }
+    th {
+      background-color: #ffe5ec;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Kosakata Bahasa Jepang</h1>
+
+  <input type="text" id="searchInput" placeholder="Cari kosakata (kanji, hiragana, atau arti)...">
+
+  <div id="kosakata-container">
+
+    <section>
+      <h2>Angka & Bilangan</h2>
+      <table class="kosakata-table">
+        <thead>
+          <tr><th>Kanji</th><th>Hiragana</th><th>Arti</th></tr>
+        </thead>
+        <tbody>
+        <tr><td>一</td><td>いち</td><td>Satu</td></tr>
+        <tr><td>二</td><td>に</td><td>Dua</td></tr>
+        <tr><td>三</td><td>さん</td><td>Tiga</td></tr>
+        <tr><td>四</td><td>よん / し</td><td>Empat</td></tr>
+        <tr><td>五</td><td>ご</td><td>Lima</td></tr>
+        <tr><td>六</td><td>ろく</td><td>Enam</td></tr>
+        <tr><td>七</td><td>なな / しち</td><td>Tujuh</td></tr>
+        <tr><td>八</td><td>はち</td><td>Delapan</td></tr>
+        <tr><td>九</td><td>きゅう</td><td>Sembilan</td></tr>
+        <tr><td>十</td><td>じゅう</td><td>Sepuluh</td></tr>
+        <tr><td>二十</td><td>にじゅう</td><td>Dua puluh</td></tr>
+        <tr><td>三十</td><td>さんじゅう</td><td>Tiga puluh</td></tr>
+        <tr><td>四十</td><td>よんじゅう</td><td>Empat puluh</td></tr>
+        <tr><td>五十</td><td>ごじゅう</td><td>Lima puluh</td></tr>
+        <tr><td>六十</td><td>ろくじゅう</td><td>Enam puluh</td></tr>
+        <tr><td>七十</td><td>ななじゅう</td><td>Tujuh puluh</td></tr>
+        <tr><td>八十</td><td>はちじゅう</td><td>Delapan puluh</td></tr>
+        <tr><td>九十</td><td>きゅうじゅう</td><td>Sembilan puluh</td></tr>
+        <tr><td>百</td><td>ひゃく</td><td>Seratus</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Keluarga</h2>
+      <table class="kosakata-table">
+        <thead>
+          <tr><th>Kanji</th><th>Hiragana</th><th>Arti</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>母</td><td>はは</td><td>Ibu</td></tr>
+          <tr><td>父</td><td>ちち</td><td>Ayah</td></tr>
+          <tr><td>兄</td><td>あに</td><td>Kakak laki-laki</td></tr>
+          <tr><td>妹</td><td>いもうと</td><td>Adik perempuan</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Kata Kerja Umum</h2>
+      <table class="kosakata-table">
+        <thead>
+          <tr><th>Kanji</th><th>Hiragana</th><th>Arti</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>行く</td><td>いく</td><td>Pergi</td></tr>
+          <tr><td>来る</td><td>くる</td><td>Datang</td></tr>
+          <tr><td>食べる</td><td>たべる</td><td>Makan</td></tr>
+          <tr><td>飲む</td><td>のむ</td><td>Minum</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    searchInput.addEventListener("keyup", function () {
+      const filter = this.value.toLowerCase();
+      const tables = document.querySelectorAll(".kosakata-table tbody");
+
+      tables.forEach(tbody => {
+        const rows = tbody.querySelectorAll("tr");
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          row.style.display = text.includes(filter) ? "" : "none";
+        });
+      });
+    });
+  </script>
+
+<a href="belajar-b-jepang.html">⬅ Kembali ke Menu Belajar</a>
+</body>
+</html>
