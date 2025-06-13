@@ -1,16 +1,17 @@
 body {
-  margin: 0;
+  margin: auto;
   font-family: 'Segoe UI', sans-serif;
-  background: #ffeef2 url('Assets/img/sakura-bg.png') repeat;
+  background: #eca5b3 url('Assets/img/sakura-bg.png') repeat;
   background-size: cover;
 }
 
 .sidebar {
-  width: 200px;
-  background-color: #fff0f5;
-  height: 100vh;
+  width: 100px;
+  background-color: #ffeef2;
+  height: 100%;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  text-align: center;
   position: fixed;
 }
 
@@ -26,7 +27,7 @@ body {
 }
 
 .sidebar li {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .sidebar a {
@@ -36,16 +37,16 @@ body {
 }
 
 .content {
-  margin-left: 220px;
+  margin-left: 120px;
   padding: 40px;
   background-image: url('assets/img/jpbackground.jfif');
   background-size: cover;
   background-position: center;
-  color: white;
+  color: rgb(48, 45, 45);
   text-shadow: 1px 1px 12px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 .social-links {
@@ -78,6 +79,8 @@ body {
 }
 
 .social-links a:hover {
+  margin: auto;
+  margin-top: 30px;
   text-decoration: underline;
   color: #ad1457;
 }
@@ -104,6 +107,10 @@ body {
     flex-wrap: wrap;
   }
 
+  .sidebar li {
+    margin: 5px 0;
+  }
+
   .content {
     margin-left: 0;
     padding: 20px;
@@ -115,3 +122,4 @@ body {
     margin-top: 30px;
   }
 }
+

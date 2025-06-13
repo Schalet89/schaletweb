@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untukmu manieezzz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #d81b60;
+    }
+
+    .options {
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #ec407a;
+      color: white;
+      cursor: pointer;
+      position: relative;
+    }
+
+    button#no:hover {
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Pilih salah satu:</h1>
+  <p>Kamu cewek atau cowok?</p>
+
+  <div class="options">
+    <button onclick="tanya()">Cewek</button>
+    <button onclick="alert('Semangat bang wkwkwkwk')">Cowok</button>
+  </div>
+
+  <div id="pertanyaan" style="display: none; margin-top: 40px;">
+    <h2>Kamu mau gak jadi pacar aku? ❤</h2>
+    <button onclick="alert('Yeeee kita jadian! 😍')">Ya</button>
+    <button id="no" onmouseover="gerak()">Tidak</button>
+  </div>
+
+  <script>
+    function tanya() {
+      document.getElementById("pertanyaan").style.display = "block";
+    }
+
+    function gerak() {
+      const btn = document.getElementById("no");
+      const x = Math.floor(Math.random() * (window.innerWidth - 100));
+      const y = Math.floor(Math.random() * (window.innerHeight - 100));
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
